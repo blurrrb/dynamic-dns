@@ -1,0 +1,28 @@
+{
+	"name": "Dynamic DNS",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"settings": {
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"server": "postgres",
+				"port": 5432,
+				"driver": "PostgreSQL",
+				"name": "postgres",
+				"database": "postgres",
+				"username": "postgres",
+				"password": "postgres"
+			}
+		]
+	},
+	"extensions": [
+		"golang.Go",
+		"mtxr.sqltools",
+		"mtxr.sqltools-driver-pg"
+	],
+	"forwardPorts": [],
+	"postCreateCommand": "go mod download && go mod tidy",
+	"remoteUser": "vscode"
+}
